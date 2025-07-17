@@ -16,7 +16,7 @@ const  Cybrom=()=>{
 
 
 <>
-<h1 className="data">we learn React</h1>
+{/* <h1 className="data">we learn React</h1> */}
 <h1>welcome to our website</h1>
 <hr/>
 Name :<input type="text" /><br/> <br />
