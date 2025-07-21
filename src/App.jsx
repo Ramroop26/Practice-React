@@ -1,16 +1,26 @@
-import Bhopal from "./Bhopal";
-import Header from "./Header";
-import Data from "./Data";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
+
 
 
 const App=()=>{
-  return (
+  return(
     <>
-    <h1>welcome To Bhopal</h1>  
-    
-    <Bhopal/>
-    <Header/>
-    <Data/>
+    <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Layout/>}>
+      <Route index element={<Home/>}/>
+
+      <Route path="home" element={<Home/>}/>
+      <Route path="about" element={<About/>}/>
+      <Route path="contact" element={<Contact/>}/>
+
+        </Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
