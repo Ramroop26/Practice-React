@@ -1,44 +1,79 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Layout from "./Layout";
-// import Home from "./Home";
-// import About from "./About";
-// import Contact from "./Contact";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+import Carousel from 'react-bootstrap/Carousel';
+import image1 from "./images/ima1.jpeg";
+import image2 from "./images/ima2.jpeg";
+import image3 from "./images/ima3.jpeg";
+
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 
 
 const App=()=>{
-//   return(
-//     <>
-//     <BrowserRouter>
-//      <Routes>
-//       <Route path="/" element={<Layout/>}>
-//       <Route index element={<Home/>}/>
 
-//       <Route path="home" element={<Home/>}/>
-//       <Route path="about" element={<About/>}/>
-//       <Route path="contact" element={<Contact/>}/>
-
-//         </Route>
-//     </Routes>
-//     </BrowserRouter>
-//     </>
-//   )
-// }
 
 
 
 
 return(
   <>
-  <h1 >CYBROM</h1>
+  <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
 
-  <h2 className="data">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus adipisci est repudiandae iusto ipsum minus magnam fuga recusandae ea deleniti voluptatum error voluptate explicabo dignissimos doloribus, exercitationem a alias consectetur.
-  Cumque obcaecati distinctio eligendi atque, iusto culpa natus neque maxime unde hic et assumenda commodi ad expedita ipsum, itaque eos fuga laboriosam? Soluta dignissimos voluptas laudantium in rem facere architecto!
-  Alias hic neque delectus at aliquid veritatis rerum accusantium perspiciatis quis, illo ea veniam. Praesentium ipsum fugiat delectus nulla quae vel quidem perferendis, repudiandae, culpa recusandae iste vero voluptatibus. Fugit.
-  Porro voluptate necessitatibus voluptates natus quaerat, nemo officia cum mollitia adipisci unde sequi maxime eos fuga culpa blanditiis minima tenetur sit eligendi dolorem numquam nostrum. Fuga sint debitis culpa facilis?</h2>
 
-<p className="pera">our company detail</p>
-  
+ <Carousel>
+      <Carousel.Item>
+       <img src={image1} width="100%" height="350" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+         <img src={image2} width="100%" height="350"/>
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+         <img src={image3} width="100%" height="350"/>
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={image1} />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+      
+     
+      
+
   </>
 )
 }
