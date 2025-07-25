@@ -11,10 +11,10 @@ import image3 from "./images/ima3.jpeg";
 
 
 
-const Navbar = () => {
+const Navba = () => {
   return (
     <>
-        <Navbar bg="primary" data-bs-theme="dark">
+        <Navbar bg="primary" data-bs-theme="dark" >
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -57,4 +57,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default Navba;
