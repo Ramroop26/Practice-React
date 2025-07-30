@@ -8,6 +8,8 @@ const MyForm=()=>{
         console.log({ emplo:emplo, name:name, city:city, salary:salary});
     }
     return(
+        //control component me value show hoti hai
+       // uncontrol component me value show nhi  hoti hai
         <>
         <h1>Application Form</h1>
          Enter Emp No: <input type="text" value={emplo}

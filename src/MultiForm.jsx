@@ -6,8 +6,8 @@ const MultiForm = () => {
    const handleInput=(e)=>{
     let name=e.target.name;
     let value=e.target.value;
-    setInput(value=>({...value, [name]:value}))
-    console.log(input)
+    setInput(values=>({...values, [name]:value}))
+    console.log(input);
 
    }
 
@@ -15,14 +15,14 @@ const MultiForm = () => {
         <>
             <h1>MultiForm</h1>
 
-            Enter Emp No: <input type="text" value="empno" onChange={handleInput} />
+            Enter Emp No: <input type="text" name="empno" onChange={handleInput} />
             <br />
-            Enter Name: <input type="text" value="name"  onChange={handleInput}/>
+            Enter Name: <input type="text" name="name"  onChange={handleInput}/>
             <br />
 
-            Enter City: <input type="text" value="city"  onChange={handleInput}/>
+            Enter City: <input type="text" name="city"  onChange={handleInput}/>
             <br />
-            Enter Salary: <input type="text" value="salary"  onChange={handleInput} />
+            Enter Salary: <input type="text" name="salary"  onChange={handleInput} />
             <br />
 
             <button >Submit</button>

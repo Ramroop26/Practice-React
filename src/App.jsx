@@ -6,6 +6,9 @@ import Count from "./Count";
 import SetTimeOut from "./SetTimeOut";
 import Multiplication from "./Multiplication";
 import MyForm from "./MyForm";
+import MultiForm from "./MultiForm";
+import First from "./Task/First"
+import Second from "./Task/Second";
 
 
 const App = () => {
@@ -13,15 +16,17 @@ const App = () => {
 
   return (
     <>
-      <Navba/>
+      {/* <Navba/>
      <Car/>
      <Contact/>
      <Color/>
      <Count/>
      <SetTimeOut/>
-     <Multiplication/> 
+     <Multiplication/>  */}
      <MyForm/> 
-     <MultiForm/>
+     {/* <MultiForm/> */}
+     <First/>
+     <Second/>
       
     
      
