@@ -23,9 +23,9 @@ const App = () => {
      <Count/>
      <SetTimeOut/>
      <Multiplication/>  */}
-     <MyForm/> 
+     {/* <MyForm/>  */}
      {/* <MultiForm/> */}
-     <First/>
+     {/* <First/> */}
      <Second/>
       
     
