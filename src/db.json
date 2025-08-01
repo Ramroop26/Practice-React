@@ -1,11 +1,25 @@
 {
-"students":[
-{
-    "id":1,
-    "rollno":100,
-    "name":"rohit",
-    "city":"indore",
-    "fees":2334
-}
-]
+  "students": [
+    {
+      "id": "1",
+      "rollno": 100,
+      "name": "rohit",
+      "city": "indore",
+      "fees": 2334
+    },
+    {
+      "id": "3feb",
+      "rollno": "123",
+      "name": "fgh",
+      "city": "tgh",
+      "fees": "567"
+    },
+    {
+      "id": "cda9",
+      "rollno": "1234",
+      "name": "rohit",
+      "city": "Morena",
+      "fees": "567"
+    }
+  ]
 }

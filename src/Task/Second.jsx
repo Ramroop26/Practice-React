@@ -27,23 +27,24 @@
 
 
 import { useState } from "react";
-
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Second=()=>{
     const [input, setInput]  = useState({});
 
     const handleInput=(e)=>{
         let name = e.target.name;
         let value = e.target.value;
-        setInput({...input,[name]:value})
+        setInput(values=> ({...values,[name]:value}))
         console.log(input);
 
     }
     const handleSubmit=async()=>{
-    let api = "";
-    const response =await axios.POST(api, input);
-        
+    let api = "http://localhost:3000/students";
+    const response = await axios.post(api, input); 
         console.log(response);
-        alert("Data Successfully Save !!!");
+        toast.success("Data Successfully Save !!!");
     }
 
 
@@ -61,7 +62,7 @@ const Second=()=>{
          <br />
 
          <button onClick={handleSubmit}>Save!!</button>
-         <br />
+         <ToastContainer/>
 
         </>
     )
