@@ -1,24 +1,28 @@
-// import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom";
 
-// const Layout=()=>{
+const Layout = () => {
 
-//     return(
+    return (
 
-    
-//         <>
 
-//         <Link to="home">Home</Link>
-//         <Link to="About">About</Link>
-//         <Link to="Contact">Contact</Link>
-//         <hr size="6" color="red"/>
-//         <Outlet/>
-//         <hr size="6" color="red"/>
+        <>
+            <Link to="home">Home |      </Link>
+            <Link to="insert">Insert   | </Link>
+            <Link to="update">Update  | </Link>
+            <Link to="display">Display |</Link>
+            <Link to="search">Search  | </Link>
+            <Link to="contact">Contact |</Link>
 
-//         www.myCompany.com
-//         </>
-//     )
-// }
 
-// export default Layout;
+            <hr size="6" color="red" />
+            <Outlet />
+            <hr size="6" color="red" />
+
+            www.myCompany.com
+        </>
+    )
+}
+
+export default Layout;
 
 

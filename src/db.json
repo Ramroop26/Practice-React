@@ -1,12 +1,12 @@
 {
   "students": [
-    {
-      "id": "1",
-      "rollno": 100,
-      "name": "rohit",
-      "city": "indore",
-      "fees": 2334
-    },
+    // {
+    //   "id": "1",
+    //   "rollno": 100,
+    //   "name": "rohit",
+    //   "city": "indore",
+    //   "fees": 2334
+    // },
     {
       "id": "3feb",
       "rollno": "123",
@@ -20,6 +20,69 @@
       "name": "rohit",
       "city": "Morena",
       "fees": "567"
+    },
+    {
+      "id": "d78a",
+      "rollno": "5647333838",
+      "name": "Manoj Prajapati",
+      "city": "bhopal",
+      "fees": "500000"
+    },
+    {
+      "id": "0ebf",
+      "rollno": "5647333838",
+      "name": "Manoj Prajapati",
+      "city": "bhopal",
+      "fees": "500000"
+    },
+    {
+      "id": "4c51",
+      "rollno": "5647333838",
+      "name": "Manoj Prajapati",
+      "city": "bhopal",
+      "fees": "500000"
+    },
+    {
+      "id": "73c4",
+      "rollno": "5647333838",
+      "name": "Manoj Prajapati",
+      "city": "bhopal",
+      "fees": "500000"
+    },
+    {
+      "id": "3cbc",
+      "rollno": "56473",
+      "name": "hemant",
+      "city": "delhi",
+      "fees": "50000"
+    },
+    {
+      "id": "930d",
+      "rollno": "7857558584",
+      "name": "rambali singh tomar",
+      "city": "morena",
+      "fees": "5000000"
+    },
+    {
+      "id": "03f4",
+      "rollno": "56677",
+      "name": "Ramroop Prajapati",
+      "city": "bhopal",
+      "fees": "45000"
+    },
+    {
+      "id": "f5b6",
+      "rollno": "56677",
+      "name": "Ramroop Prajapati",
+      "city": "bhopal",
+      "fees": "45000"
+    },
+    {
+      "id": "d901",
+      "rollno": "56677",
+      "name": "Ramroop Prajapati",
+      "city": "bhopal",
+      "fees": "45000"
     }
   ]
 }
