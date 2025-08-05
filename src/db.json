@@ -1,12 +1,12 @@
 {
   "students": [
-    // {
-    //   "id": "1",
-    //   "rollno": 100,
-    //   "name": "rohit",
-    //   "city": "indore",
-    //   "fees": 2334
-    // },
+    {
+      "id": "1",
+      "rollno": 100,
+      "name": "rohit",
+      "city": "indore",
+      "fees": 2334
+    },
     {
       "id": "3feb",
       "rollno": "123",
@@ -77,12 +77,12 @@
       "city": "bhopal",
       "fees": "45000"
     },
-    // {
-    //   "id": "d901",
-    //   "rollno": "56677",
-    //   "name": "Ramroop Prajapati",
-    //   "city": "bhopal",
-    //   "fees": "45000"
-    // }
+    {
+      "id": "d901",
+      "rollno": "56677",
+      "name": "Ramroop Prajapati",
+      "city": "bhopal",
+      "fees": "45000"
+    }
   ]
 }
