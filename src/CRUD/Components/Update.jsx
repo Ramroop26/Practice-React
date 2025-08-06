@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Update=()=>{
-    const [mydata, setMydata] = useState();
+    const [mydata, setMydata] = useState([]);
     const navgate = useNavigate();
     const loadData = async()=>{
         let api = `http://localhost:3000/students`;
@@ -24,7 +24,7 @@ const Update=()=>{
     
     }
 
-    const myEdit = ()=>{
+    const myEdit = (id)=>{
         navgate(`/myedit/${id}`)
     }
 
@@ -43,11 +43,13 @@ const Update=()=>{
                     <button onClick={()=>myEdit(item.rollno)}>Edit</button>
                     
                 </td>
+                {ans}
 
             </tr>
             </>
         )
     })
+    
     return(
         <>
         <h1>Welcome to Update Page</h1>
@@ -55,4 +57,5 @@ const Update=()=>{
     )
 
 }
+
 export default Update;
