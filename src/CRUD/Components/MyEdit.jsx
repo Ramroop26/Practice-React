@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-const {id} = useParams();
+
+   const { id } = useParams();
 const[mydata, setMydata] = useState({});
 
 const loadData = async()=>{
@@ -30,16 +31,17 @@ const handleSubmit =async()=>{
 
 
 const MyEdit =()=>{
+
     return(
         <>
         <h1>Edit Records :</h1>
-        Edit Rollno: <input type="text" name="" onChange={handleInput} />
+        Edit Rollno: <input type="text" name="rollno" value={mydata.rollno} onChange={handleInput} />
         <br />
-        Edit Name: <input type="text" name="name" onChange={handleInput}/>
+        Edit Name: <input type="text" name="name" value={mydata.name} onChange={handleInput}/>
         <br />
-        Edit City: <input type="text" name="city" onChange={handleInput}/>
+        Edit City: <input type="text" name="city"  value={mydata.city} onChange={handleInput}/>
         <br />
-        Edit Fees: <input type="text" name="fees" onChange={handleInput}/>
+        Edit Fees: <input type="text" name="fees"  value={mydata.fees} onChange={handleInput}/>
         <br />
         <button onClick={handleSubmit}>Edit Save!</button>    
         </>

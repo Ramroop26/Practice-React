@@ -43,7 +43,6 @@ const Update=()=>{
                     <button onClick={()=>myEdit(item.rollno)}>Edit</button>
                     
                 </td>
-                {ans}
 
             </tr>
             </>
@@ -52,7 +51,19 @@ const Update=()=>{
     
     return(
         <>
-        <h1>Welcome to Update Page</h1>
+        <h1>Update Page</h1>
+        <table border="1" width="700">
+            <tr>
+                <th>Rollno</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Fees</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {ans}
+
+        </table>
         </>
     )
 
