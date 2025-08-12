@@ -33,13 +33,13 @@ const MyEdit =()=>{
     return(
         <>
         <h1>Edit Records :</h1>
-        Edit Rollno: <input type="text" name="" onChange={handleInput} />
+        Edit Rollno: <input type="text" name="rollno" value={mydata.rollno} onChange={handleInput} />
         <br />
-        Edit Name: <input type="text" name="name" onChange={handleInput}/>
+        Edit Name: <input type="text" name="name" value={mydata.name} onChange={handleInput}/>
         <br />
-        Edit City: <input type="text" name="city" onChange={handleInput}/>
+        Edit City: <input type="text" name="city" value={mydata.city} onChange={handleInput}/>
         <br />
-        Edit Fees: <input type="text" name="fees" onChange={handleInput}/>
+        Edit Fees: <input type="text" name="fees" value={mydata.fees} onChange={handleInput}/>
         <br />
         <button onClick={handleSubmit}>Edit Save!</button>    
         </>

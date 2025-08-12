@@ -26,7 +26,7 @@ const Search=()=>{
     return(
         <>
         <h1>Search Page</h1>
-        Enter Rollno : <input type="text" value={rollno}  onChange={(e) =>{e.target.value}}/>
+        Enter Rollno : <input type="text" value={rollno}  onChange={(e) =>setRollno(e.target.value)}/>
         <button onClick={handleSubmit}>Search</button>
         <hr />
 

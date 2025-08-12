@@ -7,6 +7,7 @@ import Update from "./CRUD/Components/Update";
 import Search from "./CRUD/Components/Search";
 import Insert from "./CRUD/Components/Insert";
 import Display from "./CRUD/Components/Display";
+import MyEdit from "./CRUD/Components/MyEdit";
 
 
 
@@ -24,7 +25,7 @@ const App=()=>{
       <Route path="display" element={<Display/>}/>
       <Route path="contact" element={<Contact/>}/>
       <Route path="search" element={<Search/>}/>
-
+      <Route path="myedit/:id" element={<MyEdit/>}/>
         </Route>
     </Routes>
     </BrowserRouter>
