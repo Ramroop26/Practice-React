@@ -1,51 +1,79 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./STYLE/MyEdite.css";
 
-   const { id } = useParams();
-const[mydata, setMydata] = useState({});
+const MyEdit = () => {
 
-const loadData = async()=>{
-    let api = `http://localhost:3000/students/${id}`;
-    const response = await axios.get(api);
-    setMydata(response.data);
-}
+    const { id } = useParams();  // useParams inside component
+    const [mydata, setMydata] = useState({});  //  useState inside component
 
-const handleInput=(e)=>{
-    let name=e.target.name;
-    let value = e.target.value;
-    setMydata(values=>({...values, [name]:value}));
-    console.log(mydata);
-}
+    const loadData = async () => {
+        let api = `http://localhost:3000/students/${id}`;
+        const response = await axios.get(api);
+        setMydata(response.data);
+    };
 
-useEffect(()=>{
-    loadData();
-}, []);
+    const handleInput = (e) => {
+        let name = e.target.name;
+        let value = e.target.value;
+        setMydata(values => ({ ...values, [name]: value }));
+    };
 
-const handleSubmit =async()=>{
-    let api = `http://localhost:3000/students/${id}`;
-    const response = await axios.put(api, mydata);
-    console.log(response.data);
-    alert("Data Updated!!!");
-}
+    useEffect(() => {
+        loadData();
+    }, []);
 
+    const handleSubmit = async () => {
+        let api = `http://localhost:3000/students/${id}`;
+        const response = await axios.put(api, mydata);
+        console.log(response.data);
+        alert("Data Updated!!!");
+    };
 
-const MyEdit =()=>{
-
-    return(
+    return (
         <>
-        <h1>Edit Records :</h1>
-        Edit Rollno: <input type="text" name="rollno" value={mydata.rollno} onChange={handleInput} />
-        <br />
-        Edit Name: <input type="text" name="name" value={mydata.name} onChange={handleInput}/>
-        <br />
-        Edit City: <input type="text" name="city"  value={mydata.city} onChange={handleInput}/>
-        <br />
-        Edit Fees: <input type="text" name="fees"  value={mydata.fees} onChange={handleInput}/>
-        <br />
-        <button onClick={handleSubmit}>Edit Save!</button>    
-        </>
-    )
-}
+            <h1>Edit Records :</h1>
 
-export default MyEdit;  //export default keyword is used to export a single module. It is used to
+            Edit Rollno:
+            <input
+                type="text"
+                name="rollno"
+                value={mydata.rollno || ""}
+                onChange={handleInput}
+            />
+            <br />
+
+            Edit Name:
+            <input
+                type="text"
+                name="name"
+                value={mydata.name || ""}
+                onChange={handleInput}
+            />
+            <br />
+
+            Edit City:
+            <input
+                type="text"
+                name="city"
+                value={mydata.city || ""}
+                onChange={handleInput}
+            />
+            <br />
+
+            Edit Fees:
+            <input
+                type="text"
+                name="fees"
+                value={mydata.fees || ""}
+                onChange={handleInput}
+            />
+            <br />
+
+            <button onClick={handleSubmit}>Edit Save!</button>
+        </>
+    );
+};
+
+export default MyEdit;

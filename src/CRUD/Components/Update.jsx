@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./STYLE/Update.css";
+
+
 
 
 const Update=()=>{
     const [mydata, setMydata] = useState([]);
-    const navgate = useNavigate();
+    const navigate = useNavigate();
     const loadData = async()=>{
         let api = `http://localhost:3000/students`;
         const response = await axios.get(api);
@@ -18,29 +21,30 @@ const Update=()=>{
 
     }, [])
     const del = async(id)=>{
-        let api = `http://localhost:3000/students/${id}`
+        let api = `http://localhost:3000/students/${id}`;
         const response  = await axios.delete(api);
         console.log(response);
-    
+
     }
 
     const myEdit = (id)=>{
-        navgate(`/myedit/${id}`)
+        navigate(`/myedit/${id}`)
     }
 
     const ans  = mydata.map((item)=>{
         return(
             <>
             <tr>
+                
                 <td>{item.rollno}</td>
                 <td>{item.name}</td>
                 <td>{item.city}</td>
                 <td>{item.fees}</td>
                 <td>
-                    <button onClick={()=>del(item.rollno)}>Delete</button>
+                    <button onClick={()=>del(item.id)}>Delete</button>
                 </td>
                 <td>
-                    <button onClick={()=>myEdit(item.rollno)}>Edit</button>
+                    <button onClick={()=>myEdit(item.id)}>Edit</button>
                     
                 </td>
 

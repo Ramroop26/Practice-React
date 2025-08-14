@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./STYLE/Search.css";
 const Search=()=>{
     const [rollno, setRollno] = useState("");
     const [mydata, setMydata] = useState([]);
@@ -13,11 +14,11 @@ const Search=()=>{
     const ans = mydata.map((key) =>{
         return(
             <>
-            <tr>
-                <th>{key.rollno}</th>
-                <th>{key.name}</th>
-                <th>{key.city}</th>
-                <th>{key.fees}</th>
+            <tr key={key.rollno}>
+                <td>{key.rollno}</td>
+                <td>{key.name}</td>
+                <td>{key.city}</td>
+                <td>{key.fees}</td>
                 
             </tr>
             </>
@@ -26,18 +27,21 @@ const Search=()=>{
     return(
         <>
         <h1>Search Page</h1>
-        Enter Rollno : <input type="text" value={rollno}  onChange={(e) =>{e.target.value}}/>
+        Enter Rollno : <input type="text" value={rollno}  onChange={(e) =>setRollno(e.target.value)}/>
         <button onClick={handleSubmit}>Search</button>
         <hr />
 
         <table width="600" border="1">
+            <thead>
             <tr>
                 <th>Rollno</th>
                 <th>Name</th>
                 <th>City</th>
                 <th>Fees</th>
             </tr>
-            {ans}
+            </thead>
+            <tbody>{ans}</tbody>
+            
         </table>
         </>
     )
