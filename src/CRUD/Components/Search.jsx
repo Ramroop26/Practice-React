@@ -26,11 +26,11 @@ const Search=()=>{
     return(
         <>
         <h1>Search Page</h1>
-<<<<<<< HEAD
+
         Enter Rollno : <input type="text" value={rollno}  onChange={(e) =>setRollno(e.target.value)}/>
-=======
-        Enter Rollno : <input type="text" value={rollno}  onChange={(e) =>{e.target.value}}/>
->>>>>>> 640f06fdc5bf663e3ec35e0f02e57e7007d24ca8
+
+  
+
         <button onClick={handleSubmit}>Search</button>
         <hr />
 
