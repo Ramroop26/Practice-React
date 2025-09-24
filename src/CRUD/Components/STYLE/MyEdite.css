@@ -1,4 +1,4 @@
-/* MyEdite.css */
+
 
 h1 {
   text-align: center;
@@ -8,11 +8,11 @@ h1 {
 }
 
 label, /* agar aap future me labels use karoge */
-input {
+ input {
   display: block;
   font-size: 16px;
   margin-bottom: 15px;
-  width: 300px;
+  width: 200px;
   max-width: 100%;
   padding: 8px 12px;
   border-radius: 4px;
@@ -44,9 +44,4 @@ button:hover {
   background-color: #2980b9;
 }
 
-/* Optional: center form container */
-form, /* agar aap form tag lagao future me */
-div {
-  max-width: 350px;
-  margin: 0 auto;
-}
+ 

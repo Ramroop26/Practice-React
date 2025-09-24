@@ -1,12 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
-import "./CRUD/Components/STYLE/Layout.css";
+import "./STYLE/Layout.css";
 
 const Layout = () => {
     return (
-        <div className="layout-wrapper">
-            <header className="navbar">
-                <nav className="nav-links">
-                    <Link to="home">Home</Link>
+        <div className="layout-wrapper" align="center">
+            <header className="navbar" >
+                <nav className="nav-links" >
+                    <Link to="home" >Home</Link>
                     <Link to="insert">Insert</Link>
                     <Link to="update">Update</Link>
                     <Link to="display">Display</Link>
@@ -19,7 +19,8 @@ const Layout = () => {
 
             <main className="main-content">
                 <Outlet />
-            </main>
+            </main> 
+            
 
             <hr className="divider" />
 

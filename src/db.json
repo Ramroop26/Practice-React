@@ -1,13 +1,6 @@
 {
   "students": [
     {
-      "id": "0ebf",
-      "rollno": "5647333838",
-      "name": "Manoj Prajapati",
-      "city": "bhopal",
-      "fees": "5000"
-    },
-    {
       "id": "4c51",
       "rollno": "5647333838",
       "name": "Manoj Prajapati",

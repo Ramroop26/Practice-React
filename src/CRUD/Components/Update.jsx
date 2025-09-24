@@ -37,11 +37,12 @@ const Update = () => {
                 <td>{item.name}</td>
                 <td>{item.city}</td>
                 <td>{item.fees}</td>
+                
                 <td>
-                    <button className="btn delete-btn" onClick={() => del(item.id)}>Delete</button>
+                    <button className="delete-btn" onClick={() => del(item.id)}>Delete</button>
                 </td>
                 <td>
-                    <button className="btn edit-btn" onClick={() => myEdit(item.id)}>Edit</button>
+                    <button className="edit-btn" onClick={() => myEdit(item.id)}>Edit</button>
                 </td>
             </tr>
         );
@@ -57,8 +58,8 @@ const Update = () => {
                         <th>Name</th>
                         <th>City</th>
                         <th>Fees</th>
-                        <th></th>
-                        <th></th>
+                        <th>Delete</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>{ans}</tbody>

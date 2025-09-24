@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./STYLE/MyEdite.css";
 
 const MyEdit = () => {
@@ -28,7 +30,7 @@ const MyEdit = () => {
         let api = `http://localhost:3000/students/${id}`;
         const response = await axios.put(api, mydata);
         console.log(response.data);
-        alert("Data Updated!!!");
+         toast.success("Data Successfully Save !!!");
     };
 
     return (
@@ -37,41 +39,24 @@ const MyEdit = () => {
 
             Edit Rollno:
             <input
-                type="text"
-                name="rollno"
-                value={mydata.rollno || ""}
-                onChange={handleInput}
-            />
-            <br />
+                type="text" name="rollno" value={mydata.rollno || ""}  onChange={handleInput}
+            /> <br />
 
             Edit Name:
-            <input
-                type="text"
-                name="name"
-                value={mydata.name || ""}
-                onChange={handleInput}
-            />
-            <br />
+            <input type="text" name="name" value={mydata.name || ""} onChange={handleInput}
+            /> <br />
 
             Edit City:
-            <input
-                type="text"
-                name="city"
-                value={mydata.city || ""}
-                onChange={handleInput}
-            />
-            <br />
+            <input   type="text"  name="city" value={mydata.city || ""}  onChange={handleInput}
+            /><br />
 
             Edit Fees:
-            <input
-                type="text"
-                name="fees"
-                value={mydata.fees || ""}
-                onChange={handleInput}
+            <input type="text" name="fees" value={mydata.fees || ""}  onChange={handleInput}
             />
             <br />
 
             <button onClick={handleSubmit}>Edit Save!</button>
+            <ToastContainer/>
         </>
     );
 };

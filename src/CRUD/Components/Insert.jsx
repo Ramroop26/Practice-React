@@ -10,7 +10,7 @@ const Insert=()=>{
         let name = e.target.name;
         let value =e.target.value;
         setInput(values=>({...values,[name]:value}))
-        console.log(input)
+        console.log(input);
         
     }
 
@@ -24,13 +24,12 @@ const Insert=()=>{
     return(
         <>
         <h1>Welcome to Insert Page</h1>
-        Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/> <br /><br />
+        Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/><br /><br />
         Enter Name: <input type="text"  name="name" onChange={handleInput}/><br /><br />
         Enter City: <input type="text"  name="city" onChange={handleInput}/><br /><br />
         Enter Fees: <input type="text"  name="fees" onChange={handleInput}/><br /><br />
         <button onClick={handleSubmit}>Submit</button>
         <ToastContainer/>
-
         </>
     )
 
